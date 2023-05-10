@@ -1,0 +1,66 @@
+﻿@using System.Globalization;
+@model WebGraphApplication.ViewModel.HomePageViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="gridItem temasCard">
+    <h2 class="teamsTitle"><span class="fancy">Teams information </span></h2>
+    <p></p>
+    @* <div class="row row-cols-1 row-cols-md-3 g-4">*@
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @{
+            var count = Model.counts;
+            var i = 0;
+        }
+
+
+
+        @foreach (var item in Model.Messages)
+        {
+            var foto = Model.photos.Select(x => x).Where(p => p.userId == item.From.User.Id).First();
+
+            if (item != null)
+            {
+                <div class="col">
+                    <div class="card h-100 bg-white">
+
+                        <div class="card-body">
+                            @if (foto != null && !string.IsNullOrEmpty(foto.PhotoURL))
+                            {
+                                <img src="@(foto.PhotoURL)" class="mb-4 userImage" alt="Bild på @(item.From.User.DisplayName)" />
+                            }
+
+                            <h5 class="card-title">@item.From.User.DisplayName</h5>
+                            <p class="card-text">
+                                @*<img src="./img/content.png" />Content: @System.Text.RegularExpressions.Regex.Replace(item.Body.Content, "<.*?>", string.Empty)*@
+                                <div class="card-text DateTime">@Html.Raw(item.CreatedDateTime.Value.ToString("dddd HH MMMM hh:mm ", CultureInfo.GetCultureInfo("sv-SE")))</div>
+                                <div class="card-text subject">@Html.Raw(item.Subject) </div>
+                                <div class="card-text content">@Html.Raw(item.Body.Content) </div>
+                                @*<p class="card-text"><img src="./img/content.png" />Content: @item.Body.Content</p>*@
+
+
+                        </div>
+
+                        <ul class="ul">
+
+                             <li class="replies"> <img src="./img/reply1.png" />Replies:  @count[i] </li>
+                            <li> <img src="./img/reaction(1).png" /> Reaction: @item.Reactions.Count()</li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+            }@* i++;*@
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
+

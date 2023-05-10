@@ -1,0 +1,94 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    padding-top: 100px;
+    margin-bottom: 60px;
+    background-color: #0B2447;
+}
+
+h2 {
+    text-align :center;
+}
+
+.teamsTitle {
+    color:white;
+}
+.card {
+    background-color: #CAF0F8;
+    height: 200px;
+}
+.row {
+    display:flex;
+    flex-wrap:wrap;
+    
+}
+
+.col{
+    margin-top:80px;
+}
+.col-md-8 {
+    align-self: end;
+    margin-top: -88px;
+}
+
+.ul {
+    margin-top:8px;
+
+}
+    .ul li {
+        display: inline-flex;
+        padding: 5px;
+        list-style-position: inside;
+        
+        border: 1px solid blue;
+        
+            
+    }
+    .ul img {
+        padding-right:5px;
+    }
+.card-title {
+    padding-top: 55px;
+    text-align: center;
+    color: #0B2447;
+}
+.card-text img {
+    width: 30px;
+    padding-right: 5px;
+}
+
+
+
+.userImage {
+    width:105px;
+    border-radius:50%;
+    position:absolute;
+    top:-58px;
+    right:157px;
+}
+.subject {
+  
+    font-weight: bold;
+}
+
+
+.content img{
+    width:35px !important;
+    height:30px !important;
+}
+.DateTime {
+    color:darkblue;
+}

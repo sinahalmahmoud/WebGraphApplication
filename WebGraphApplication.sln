@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGraphApplication", "WebGraphApplication\WebGraphApplication.csproj", "{A16CF7F1-1188-4019-9B49-687E1EA41A16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A16CF7F1-1188-4019-9B49-687E1EA41A16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16CF7F1-1188-4019-9B49-687E1EA41A16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16CF7F1-1188-4019-9B49-687E1EA41A16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16CF7F1-1188-4019-9B49-687E1EA41A16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C41D3BB-85CF-4BC6-9239-7FBC2B8F6A1C}
+	EndGlobalSection
+EndGlobal
