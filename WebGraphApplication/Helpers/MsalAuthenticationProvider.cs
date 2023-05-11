@@ -41,22 +41,6 @@ namespace WebGraphApplication.Helpers
             var responseString = await response.Content.ReadAsStringAsync();
             Office365Token result = JsonSerializer.Deserialize<Office365Token>(responseString);
             return result;
-
-            //List<KeyValuePair<string, string>> values = new List<KeyValuePair<string, string>>();
-            //values.Add(new KeyValuePair<string, string>("client_id", "573a6455-6089-4586-ba70-4b24c1e38591"));
-            //values.Add(new KeyValuePair<string, string>("resource", graph ? "https://graph.microsoft.com" : "https://graph.microsoft.com"));
-            //values.Add(new KeyValuePair<string, string>("username", "sinah.almahmoud@preciofishbone.se"));
-            //values.Add(new KeyValuePair<string, string>("password", "123ChangeMe"));
-            //values.Add(new KeyValuePair<string, string>("grant_type", "password"));
-            //values.Add(new KeyValuePair<string, string>("client_secret", "otr8Q~wT8Ap_vMqD-TC4SSPhQMKW6NNfL3gxzaDh"));
-            //using HttpClient client = new();
-            //var content = new FormUrlEncodedContent(values);
-            //var url = $"https://login.microsoftonline.com/7f34bc08-7585-4811-b5e3-124306325c55/oauth2/token";
-
-            //using var response = await client.PostAsync(url, content);
-            //var responseString = await response.Content.ReadAsStringAsync();
-            //Office365Token result = JsonSerializer.Deserialize<Office365Token>(responseString);
-            //return result;
         }
     }
 }
