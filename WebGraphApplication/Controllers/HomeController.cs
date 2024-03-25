@@ -48,10 +48,7 @@ namespace WebGraphApplication.Controllers
 
             //sinahs konto
             var Messagesgraphrequest = client.Teams["47294b18-6ee6-4f54-a61f-caef298fe9e9"].Channels["19:9797320d14c845959f39654d1b9cc6cc@thread.tacv2"].Messages.Request().Top(5);
-           // prrecio fishbone konto
-           //var Messagesgraphrequest = client.Teams["bac562e9-d3d0-4900-a383-e4740c5be1a8"].Channels["19:1e6223cb8c6841e086a36ad6d1c65ea9@thread.skype"].Messages.Request().Top(3);
-           // //var Messagesgraphrequest = client.Teams["bac562e9-d3d0-4900-a383-e4740c5be1a8"].AllChannels.Request();
-
+          
             var MessageResult = Messagesgraphrequest.GetAsync().Result;
             var messages = new List<ChatMessage>();
             var userphotolist = new List<Photos>();
@@ -67,9 +64,7 @@ namespace WebGraphApplication.Controllers
                     var userid = result.From.User.Id;
                     // sinahs konto
                     var Replygraphrequest = client.Teams["47294b18-6ee6-4f54-a61f-caef298fe9e9"].Channels["19:9797320d14c845959f39654d1b9cc6cc@thread.tacv2"].Messages[$"{result.Id}"].Replies.Request();
-                    //precio fishbone konto
-                    //var Replygraphrequest = client.Teams["bac562e9-d3d0-4900-a383-e4740c5be1a8"].Channels["19:1e6223cb8c6841e086a36ad6d1c65ea9@thread.skype"].Messages[$"{result.Id}"].Replies.Request();
-                    var Replyresult = Replygraphrequest.GetAsync().Result;
+                      var Replyresult = Replygraphrequest.GetAsync().Result;
                     model.counts.Add(Replyresult.Count.ToString());
 
                     ////get photoinformation photo id
